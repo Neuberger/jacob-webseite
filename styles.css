@@ -96,7 +96,7 @@ body {
 }
 
 .container {
-    max-width: 1200px; /* Maximale Breite von 1200 Pixel */
+    max-width: 1080px; /* Maximale Breite von 1200 Pixel */
     width: 100%; /* Breite auf 100% des verfügbaren Raums setzen */
     height: auto; /* Automatische Höhe */
     padding: 20px; /* Innenabstand für den Inhalt */
