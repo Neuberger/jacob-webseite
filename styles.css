@@ -1,6 +1,6 @@
 main { 
     font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
-    font-size: 12px; /* Bestimme die Schriftgröße */
+    font-size: 15px; /* Bestimme die Schriftgröße */
     }
 
 h1 {font-family: Arial, Helvetica, sans-serif;
@@ -28,9 +28,6 @@ h2 {font-family: Arial, Helvetica, sans-serif;
     text-decoration:none
     }
 
-.navlist li a: :hover{
-    color: black}
-
 .navbar {
     background-color:black;
     height: 50px}
@@ -38,53 +35,6 @@ h2 {font-family: Arial, Helvetica, sans-serif;
 .text {font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
     font-size: 15px; /* Bestimme die Schriftgröße */
     }
-
-
-
-    /* Styling für das Menü */
-.side-menu {
-    font-family: Arial, Helvetica, sans-serif;
-    height: 100%;
-    width: 0; /* Menü ist zuerst versteckt */
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: #333;
-    overflow-x: hidden;
-    transition: 0.5s; /* Animation für das Öffnen/Schließen */
-}
-
-.side-menu ul {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 20px;
-    list-style-type: none;
-}
-
-.side-menu ul li {
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
-}
-
-.side-menu ul li a {
-    color: white;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    display: block;
-    transition: 0.3s;
-}
-
-.side-menu ul li a:hover {
-    color: #21112;
-}
-
-
-
-
-
-* {
-    box-sizing: border-box; /* Für konsistente Breitenberechnung */
-}
 
 body {
     font-family: Arial, sans-serif;
