@@ -14,51 +14,35 @@
     </style>
     </head>
     <body>
+        <div class="container">
             <header>
-            <!-- Button zum Öffnen des Menüs -->
-            <button class="menu-btn" onclick="toggleMenu()">☰ Menü</button>
-
-            <!-- Das versteckte Seitenmenü -->
-            <nav id="side-menu" class="side-menu">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Youtube</a></li>
-                    <li><a href="#">Twitch</a></li>
-                    <li><a href="#">Instagram</a></li>
-                </ul>
-            </nav>
+                <nav class="navbar">
+                    <ul class="navlist">
+                        <li><a href="https://www.youtube.com/@JacobMedrea" targets="_blank">youtube</a></li>
+                        <li><a href="https://www.instagram.com/medreamusic/" targets="_blank">instagram</a></li>
+                        <li><a href="https://www.twitch.tv/jacobmedreamusic?lang=de" targets="_blank">twitch</a></li>
+                        <li><a href="https://www.tiktok.com/@medreamusic" targets="_blank">tiktok</a></li>
+                    </ul>
+                    </nav>
+                </nav>
  
                 <a href="https://linktr.ee/jacobmedrea"><img src="images/inflationspop-banner-001.png" alt="Beschreibung des Bildes"></a>
             </header>
         <main>
                 <h1>Jacob Medrea</h1>
 
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/79mlaaCo-Bg?si=JOLaqJhdk_EbPSaJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <div class="video-responsive">
+                    <iframe src="https://www.youtube.com/embed/79mlaaCo-Bg" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen></iframe>
                 </div>
                 
-                <style>
-                    .video-container {
-                        position: relative;
-                        width: 100%;  /* Die Breite nimmt 100% des verfügbaren Raums ein */
-                        padding-bottom: 56.25%; /* 16:9 Seitenverhältnis */
-                        height: 0; /* Die Höhe wird durch das Padding gesetzt */
-                        overflow: hidden; /* Alles, was über den Container hinausgeht, wird ausgeblendet */
-                    }
-                
-                    .video-container iframe {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%; /* Das Video füllt die gesamte Breite des Containers aus */
-                        height: 100%; /* Das Video füllt die gesamte Höhe des Containers aus */
-                        border: 0; /* Kein Rahmen */
-                    }
-                </style>
-                                <p class="text">
+                <button onclick="alert('Button geklickt!')">Klick mich!</button>                <p class="text">
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
                 </p>   
-            <a class "pic-002" href="https://linktr.ee/jacobmedrea"><img src="images/jacob-medrea.png" alt="Beschreibung des Bildes"></a>
+            <a class width"auto"="pic-002" href="https://linktr.ee/jacobmedrea"><img src="images/jacob-medrea.png" alt="Beschreibung des Bildes"></a>
             
             <br>
                     </main>
@@ -71,7 +55,6 @@
                 Legal
             </p>
         </footer>
-         <!-- Externes JavaScript am Ende des body-Tags -->
-    <script src="script.js"></script>
+        </div>
     </body>
 </html>
