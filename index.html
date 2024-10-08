@@ -15,15 +15,18 @@
     </head>
     <body>
             <header>
-                <nav class="navbar">
-                    <ul class="navlist">
-                        <li><a href="https://www.youtube.com/@JacobMedrea" targets="_blank">youtube</a></li>
-                        <li><a href="https://www.instagram.com/medreamusic/" targets="_blank">instagram</a></li>
-                        <li><a href="https://www.twitch.tv/jacobmedreamusic?lang=de" targets="_blank">twitch</a></li>
-                        <li><a href="https://www.tiktok.com/@medreamusic" targets="_blank">tiktok</a></li>
-                    </ul>
-                    </nav>
-                </nav>
+            <!-- Button zum Öffnen des Menüs -->
+            <button class="menu-btn" onclick="toggleMenu()">☰ Menü</button>
+
+            <!-- Das versteckte Seitenmenü -->
+            <nav id="side-menu" class="side-menu">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Über mich</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                </ul>
+            </nav>
  
                 <a href="https://linktr.ee/jacobmedrea"><img src="images/inflationspop-banner-001.png" alt="Beschreibung des Bildes"></a>
             </header>
@@ -68,5 +71,7 @@
                 Legal
             </p>
         </footer>
+         <!-- Externes JavaScript am Ende des body-Tags -->
+    <script src="js.js"></script>
     </body>
 </html>
