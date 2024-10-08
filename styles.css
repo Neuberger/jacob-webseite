@@ -1,0 +1,50 @@
+.links {
+    font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    font-size: 12px; /* Bestimme die Schriftgröße */
+    }
+
+.header {
+    font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    font-size: 12px; /* Bestimme die Schriftgröße */
+    }
+
+main { 
+    Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    font-size: 12px; /* Bestimme die Schriftgröße */
+    }
+
+h1 {font-family: Arial, Helvetica, sans-serif;
+    font-size: 64px; /* Bestimme die Schriftgröße */
+    text-align:center}
+
+h2 {font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 32px; /* Bestimme die Schriftgröße */
+    text-align:center}
+
+.navlist {
+    font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    color: #ddd;
+    font-size: 12px; /* Bestimme die Schriftgröße */
+    float: right}
+
+.navlist li{
+    display:inline-block
+    }
+
+.navlist li a{
+    color: #fff;
+    margin: 0 10px;
+    text-decoration:none
+    }
+
+.navlist li a: :hover{
+    color: black}
+
+.navbar {background-color:black;
+    height: 50px}
+
+.text {font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    font-size: 12px; /* Bestimme die Schriftgröße */
+    }
+
