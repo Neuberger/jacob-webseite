@@ -1,19 +1,5 @@
-main { 
-    font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
-    font-size: 15px; /* Bestimme die Schriftgröße */
-    }
-
-h1 {font-family: Arial, Helvetica, sans-serif;
-    font-size: 32px; /* Bestimme die Schriftgröße */
-    text-align:left}
-
-h2 {font-family: Arial, Helvetica, sans-serif;
-    font-weight:bolder;
-    font-size: 20px; /* Bestimme die Schriftgröße */
-    text-align:left}
-
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -22,15 +8,27 @@ body {
     min-height: 100vh; /* Mindestens volle Höhe des Viewports */
     }
 
+main { 
+    font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    font-size: 15px; /* Bestimme die Schriftgröße */
+    }
+
 .text {
     font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
     font-size: 15px; /* Bestimme die Schriftgröße */
     }
 
+h1 {font-size: 32px; /* Bestimme die Schriftgröße */
+    text-align:left}
+    
+h2 {font-weight:bolder;
+    font-size: 20px; /* Bestimme die Schriftgröße */
+    text-align:left}
+
 
 
 .container {
-    max-width: 1080px; /* Maximale Breite von 1200 Pixel */
+    max-width: 1200px; /* Maximale Breite von 1200 Pixel */
     width: 100%; /* Breite auf 100% des verfügbaren Raums setzen */
     height: auto; /* Automatische Höhe */
     padding: 20px; /* Innenabstand für den Inhalt */
@@ -70,12 +68,13 @@ body {
     font-size: 15px;
     }
 
+    
 
 .menu-btn {
         position: fixed;
         top: 10px;
-        right: 40px;
-        font-size: 30px;
+        right: 10px;
+        font-size: 25px;
         background-color: transparent;
         border: none;
         color: #333;
