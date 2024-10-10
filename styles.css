@@ -33,7 +33,6 @@ h2 {font-weight:bolder;
     height: auto; /* Automatische Höhe */
     padding: 20px; /* Innenabstand für den Inhalt */
     border: 50px solid #fff; /* Rahmen für das Container-Div */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Leichter Schatten für 3D-Effekt */
     background-color: #fff; /* Hintergrundfarbe */
     transition: transform 0.3s ease, opacity 0.3s ease; 
         }
