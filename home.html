@@ -9,15 +9,20 @@
         /* Container für das Bild und den Text */
         .image-container {
             position: relative;
-            display: inline-block;
-            text-align: center;
+            display: flex; /* Flexbox für die gesamte Container */
+            justify-content: center; /* Zentriert den Inhalt */
+            align-items: flex-end; /* Richtet den Inhalt am unteren Ende aus */
             width: 100%; /* Volle Breite des Containers */
+            overflow: hidden; /* Verhindert, dass Überlauf angezeigt wird */
+            max-height: 100vh; /* Maximale Höhe auf der Ansichtshöhe begrenzen */
         }
 
         /* Das Bild */
         .image-container img {
             width: 100%;
             height: auto; /* Automatische Höhe, um das Seitenverhältnis zu bewahren */
+            max-height: 100%; /* Maximalhöhe auf 100% setzen */
+            object-fit: cover; /* Deckt den gesamten Container ab */
         }
 
         /* Der Text über dem Bild */
@@ -30,10 +35,10 @@
             box-sizing: border-box; /* Padding in die Breite einbeziehen */
             color: white; /* Textfarbe */
             z-index: 10; /* Sicherstellen, dass das Overlay über dem Bild liegt */
-            background-color: rgba(0, 0, 0, 0.5); /* Halbdurchsichtiger Hintergrund für bessere Lesbarkeit */
             display: flex; /* Flexbox für Anordnung */
-            align-items: center; /* Vertikale Zentrierung */
+            align-items: flex-start; /* Oben ausrichten */
             flex-wrap: wrap; /* Ermöglicht Zeilenumbruch für kleinere Bildschirme */
+            background-color: rgba(0, 0, 0, 0.5); /* Halbdurchsichtiger Hintergrund für bessere Lesbarkeit */
         }
 
         .menu-overlay h1 {
@@ -41,6 +46,8 @@
             font-size: 62px; /* Schriftgröße */
             padding-right: 20px; /* Abstand zwischen dem Namen und den Links */
             line-height: 1; /* Zeilenhöhe für gleichmäßige Ausrichtung */
+            display: flex; /* Flexbox für vertikale Zentrierung */
+            align-items: flex-start; /* Oben ausrichten */
         }
 
         .links {
@@ -56,6 +63,12 @@
             color: white; /* Textfarbe */
             margin: 5px 0; /* Abstand zwischen den Links */
             line-height: 1.2; /* Zeilenhöhe für gleichmäßige Abstände */
+            transition: font-weight 0.3s ease; /* Übergang für die Schriftstärke */
+        }
+
+        /* Hover-Effekt für die Links */
+        .menu-overlay a:hover {
+            font-weight: bold; /* Link-Text wird fett bei Hover */
         }
 
         /* Responsives Design für den Text-Overlay */
@@ -71,7 +84,7 @@
 
         @media (max-width: 768px) {
             .menu-overlay h1 {
-                font-size: 40px; /* Kleinere Schriftgröße auf kleinen Bildschirmen */
+                font-size: 32px; /* Kleinere Schriftgröße auf kleinen Bildschirmen */
             }
 
             .menu-overlay a {
@@ -94,9 +107,9 @@
 
     <!-- Container mit Bild und Text -->
     <div class="image-container">
-        <img src="images/Jacob Medrea.JPG" alt="Jacob Medrea">
+        <img src="images/jacob-medrea_001.jpg" alt="Jacob Medrea">
         <div class="menu-overlay">
-            <h1>JACOB MEDREA</h1>
+            <h1>Jacob Medrea</h1>
             <div class="links"> <!-- Neuer Container für die Links -->
                 <a href="index.html">music</a>
                 <a href="https://www.youtube.com/@JacobMedrea" target="_blank">youtube</a>
