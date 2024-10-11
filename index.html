@@ -17,12 +17,21 @@
             overflow: hidden; /* Verhindert, dass Überlauf angezeigt wird */
         }
 
-        /* Das Bild */
-        .image-container img {
+        /* Desktop Bild */
+        .desktop-image {
             width: 100%;
             height: auto; /* Automatische Höhe, um das Seitenverhältnis zu bewahren */
             max-height: 100%; /* Maximalhöhe auf 100% setzen */
             object-fit: cover; /* Deckt den gesamten Container ab */
+        }
+
+        /* Mobile Bild */
+        .mobile-image {
+            width: 100%;
+            height: auto; /* Automatische Höhe, um das Seitenverhältnis zu bewahren */
+            max-height: 100%; /* Maximalhöhe auf 100% setzen */
+            object-fit: cover; /* Deckt den gesamten Container ab */
+            display: none; /* Standardmäßig verstecken */
         }
 
         /* Der Text über dem Bild */
@@ -71,45 +80,26 @@
             font-weight: bold; /* Link-Text wird fett bei Hover */
         }
 
-        /* Responsives Design für den Text-Overlay */
-        @media (max-width: 1024px) {
-            .menu-overlay h1 {
-                font-size: 50px; /* Kleinere Schriftgröße für Tablets */
-            }
-
-            .menu-overlay a {
-                font-size: 18px; /* Kleinere Schriftgröße für Links */
-            }
-        }
-
+        /* Responsive Design für die Bilder */
         @media (max-width: 768px) {
-            /* Hochformat für mobile Ansicht */
-            .image-container {
-                height: 100vh; /* Höhe auf volle Bildschirmhöhe setzen */
+            /* Mobile Ansicht */
+            .desktop-image {
+                display: none; /* Desktop Bild verstecken */
             }
 
-            .image-container img {
-                height: 100%; /* Höhe auf 100% setzen, um den gesamten Container auszufüllen */
-                object-fit: cover; /* Deckt den gesamten Container ab */
-                object-position: center; /* Bild zentrieren */
-            }
-
-            .menu-overlay h1 {
-                font-size: 32px; /* Kleinere Schriftgröße auf kleinen Bildschirmen */
-            }
-
-            .menu-overlay a {
-                font-size: 16px; /* Kleinere Schriftgröße für Links */
+            .mobile-image {
+                display: block; /* Mobile Bild anzeigen */
             }
         }
 
-        @media (max-width: 480px) {
-            .menu-overlay h1 {
-                font-size: 30px; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
+        @media (min-width: 769px) {
+            /* Desktop Ansicht */
+            .mobile-image {
+                display: none; /* Mobile Bild verstecken */
             }
 
-            .menu-overlay a {
-                font-size: 14px; /* Kleinere Schriftgröße für Links auf sehr kleinen Bildschirmen */
+            .desktop-image {
+                display: block; /* Desktop Bild anzeigen */
             }
         }
     </style>
@@ -118,7 +108,8 @@
 
     <!-- Container mit Bild und Text -->
     <div class="image-container">
-        <img src="images/jacob-medrea_001.jpg" alt="Jacob Medrea" />
+        <img src="images/jacob-medrea_001_desktop.jpg" alt="Jacob Medrea" class="desktop-image" />
+        <img src="images/jacob-medrea_001_mobil.jpg" alt="Jacob Medrea" class="mobile-image" />
         <div class="menu-overlay">
             <h1>Jacob Medrea</h1>
             <div class="links"> <!-- Neuer Container für die Links -->
