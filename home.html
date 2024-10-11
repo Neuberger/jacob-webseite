@@ -1,65 +1,112 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Text über Bild</title>
-  <style>
-    /* Container für das Bild und den Text */
-    .image-container {
-      position: relative;
-      display: inline-block;
-      text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text über Bild</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Container für das Bild und den Text */
+        .image-container {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            width: 100%; /* Volle Breite des Containers */
+        }
 
-    /* Das Bild */
-    .image-container img {
-      width: 100%;
-      height: auto;
-    }
+        /* Das Bild */
+        .image-container img {
+            width: 100%;
+            height: auto; /* Automatische Höhe, um das Seitenverhältnis zu bewahren */
+        }
 
-    /* Der Text über dem Bild */
-    .image-container .text-overlay {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 24px;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Schlagschatten für bessere Lesbarkeit */
-    }
-    .menu-overlay {
-      position: absolute;
-      top: 85%;
-      left: 15%;
-      transform: translate(-50%, -50%);
-      color: white;
-      font-family: Arial, Helvetica, sans-serif;
-      font-size: 24px;
-      font-weight:lighter;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Schlagschatten für bessere Lesbarkeit */
-    }
-    .menu-overlay a {
-    text-decoration: none;
-    color: inherit;}
-  </style>
+        /* Der Text über dem Bild */
+        .image-container .menu-overlay {
+            position: absolute; /* Absolut positioniert in Bezug auf den Container */
+            bottom: 0; /* Unten anordnen */
+            left: 0; /* Links ausrichten */
+            width: 100%; /* Volle Breite */
+            padding: 10px; /* Abstand um den Inhalt */
+            box-sizing: border-box; /* Padding in die Breite einbeziehen */
+            color: white; /* Textfarbe */
+            z-index: 10; /* Sicherstellen, dass das Overlay über dem Bild liegt */
+            background-color: rgba(0, 0, 0, 0.5); /* Halbdurchsichtiger Hintergrund für bessere Lesbarkeit */
+            display: flex; /* Flexbox für Anordnung */
+            align-items: center; /* Vertikale Zentrierung */
+            flex-wrap: wrap; /* Ermöglicht Zeilenumbruch für kleinere Bildschirme */
+        }
+
+        .menu-overlay h1 {
+            margin: 0; /* Abstand entfernen */
+            font-size: 62px; /* Schriftgröße */
+            padding-right: 20px; /* Abstand zwischen dem Namen und den Links */
+            line-height: 1; /* Zeilenhöhe für gleichmäßige Ausrichtung */
+        }
+
+        .links {
+            display: flex; /* Flexbox für Links */
+            flex-direction: column; /* Vertikale Anordnung der Links */
+            text-align: left; /* Text linksbündig */
+            justify-content: flex-start; /* Oben ausrichten */
+        }
+
+        .menu-overlay a {
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none; /* Keine Unterstreichung */
+            color: white; /* Textfarbe */
+            margin: 5px 0; /* Abstand zwischen den Links */
+            line-height: 1.2; /* Zeilenhöhe für gleichmäßige Abstände */
+        }
+
+        /* Responsives Design für den Text-Overlay */
+        @media (max-width: 1024px) {
+            .menu-overlay h1 {
+                font-size: 50px; /* Kleinere Schriftgröße für Tablets */
+            }
+
+            .menu-overlay a {
+                font-size: 18px; /* Kleinere Schriftgröße für Links */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-overlay h1 {
+                font-size: 40px; /* Kleinere Schriftgröße auf kleinen Bildschirmen */
+            }
+
+            .menu-overlay a {
+                font-size: 16px; /* Kleinere Schriftgröße für Links */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-overlay h1 {
+                font-size: 30px; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
+            }
+
+            .menu-overlay a {
+                font-size: 14px; /* Kleinere Schriftgröße für Links auf sehr kleinen Bildschirmen */
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Container mit Bild und Text -->
-  <div class="image-container">
-    <img src="images/jacob-medrea-002.png" alt="Beispielbild">
-    <div class="menu-overlay">
-        <a href="index.html">home</a><br>
-        <a href="https://www.youtube.com/@JacobMedrea" targets="_blank">youtube</a></li><br>
-        <a href="https://www.instagram.com/medreamusic/" targets="_blank">instagram</a></li><br>
-        <a href="https://www.twitch.tv/jacobmedreamusic?lang=de" targets="_blank">twitch</a></li><br>
-        <a href="https://www.tiktok.com/@medreamusic" targets="_blank">tiktok</a></li><br>
-        <a>booking</a></li>
-    </ul>
-  </div>
+    <!-- Container mit Bild und Text -->
+    <div class="image-container">
+        <img src="images/Jacob Medrea.JPG" alt="Jacob Medrea">
+        <div class="menu-overlay">
+            <h1>JACOB MEDREA</h1>
+            <div class="links"> <!-- Neuer Container für die Links -->
+                <a href="index.html">music</a>
+                <a href="https://www.youtube.com/@JacobMedrea" target="_blank">youtube</a>
+                <a href="https://www.instagram.com/medreamusic/" target="_blank">instagram</a>
+                <a href="https://www.twitch.tv/jacobmedreamusic?lang=de" target="_blank">twitch</a>
+                <a href="https://www.tiktok.com/@medreamusic" target="_blank">tiktok</a>
+                <a href="#booking">booking</a>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

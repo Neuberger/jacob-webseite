@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Helvetica Neue",Arial,sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,12 +9,12 @@ body {
     }
 
 main { 
-    font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    font-family: "Helvetica Neue",Arial,sans-serif; /* Bestimme die Schriftart */
     font-size: 15px; /* Bestimme die Schriftgröße */
     }
 
 .text {
-    font-family: Arial, Helvetica, sans-serif; /* Bestimme die Schriftart */
+    font-family: "Helvetica Neue",Arial,sans-serif; /* Bestimme die Schriftart */
     font-size: 15px; /* Bestimme die Schriftgröße */
     }
 
@@ -71,8 +71,8 @@ h2 {font-weight:bolder;
 
 .menu-btn {
         position: fixed;
-        top: 10px;
-        right: 10px;
+        top: 12px;
+        right: 12px;
         font-size: 25px;
         background-color: transparent;
         border: none;
@@ -112,4 +112,90 @@ h2 {font-weight:bolder;
 h1, p, ul {
     margin: 0 0 20px; /* Abstände für Elemente */}
 
+
+.name {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    font-size: 22px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    z-index: 1100;
+    }
+
+
+
+
+
+    .button {
+        width: 150px; /* Feste Breite */
+        height: 75px;
+        padding: 15px; /* Innenabstand */
+        font-size: 20px;
+        font-family: "Helvetica Neue",Arial,sans-serif;;
+        color: black; /* Schwarzer Text */
+        background-color: white; /* Weiße Fläche */
+        outline: 2px solid black; /* Schwarzer Rahmen */
+        border: none; /* Kein innerer Rahmen */
+        cursor: pointer; /* Zeiger ändern bei Hover */
+        transition: background-color 0.2s ease, color 0.3s ease, outline-color 0.3s ease; /* Sanfter Übergang */
+        text-align: center; /* Text zentrieren */
+        display: flex; /* Flexbox aktivieren */
+        justify-content: center; /* Zentriert den Text horizontal */
+        align-items: center; /* Zentriert den Text vertikal */
+        box-sizing: border-box; /* Stellt sicher, dass Padding und Outline die Größe nicht beeinflussen */
+        text-decoration: none; /* Unterstrich entfernen */
+    }
+
+    /* Hover-Effekt */
+    .button:hover {
+        background-color: black; /* Hintergrundfarbe beim Hover */
+        color: white; /* Textfarbe beim Hover */
+        outline-color: black; /* Rahmenfarbe beim Hover */
+    }
+
+
+
+/* Modal */
+.modal {
+    display: none; /* Versteckt das Modal standardmäßig */
+    position: fixed; /* Fixiert das Modal */
+    z-index: 1000; /* Sicherstellen, dass es oben angezeigt wird */
+    left: 0;
+    top: 0;
+    width: 100%; /* Vollbildbreite */
+    height: 100%; /* Vollbildhöhe */
+    overflow: auto; /* Scrollen, wenn nötig */
+    background-color: rgba(0, 0, 0, 0.8); /* Hintergrundfarbe mit Transparenz */
+}
+
+/* Modal-Inhalt (Bild) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Bildbreite */
+    height: auto; /* Bildhöhe */
+}
+
+/* Schließen-Button */
+.close {
+    position: absolute; /* Positioniert den Schließen-Button */
+    top: 20px;
+    right: 35px;
+    color: white; /* Schließen-Button-Farbe */
+    font-size: 40px; /* Größe des Schließen-Buttons */
+    font-weight: bold; /* Fett */
+    transition: 0.3s; /* Übergangseffekt */
+    cursor: pointer; /* Zeiger */
+}
+
+/* Schließen-Button-Hover */
+.close:hover,
+.close:focus {
+    color: #bbb; /* Farbe beim Hover */
+    text-decoration: none; /* Keine Unterstreichung */
+    cursor: pointer; /* Zeiger */
+}
 
