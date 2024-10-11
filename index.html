@@ -23,6 +23,7 @@
             height: auto; /* Automatische Höhe, um das Seitenverhältnis zu bewahren */
             max-height: 100%; /* Maximalhöhe auf 100% setzen */
             object-fit: cover; /* Deckt den gesamten Container ab */
+            object-position: center top; /* Bildausschnitt von der Mitte oben */
         }
 
         /* Der Text über dem Bild */
@@ -90,6 +91,11 @@
             .menu-overlay a {
                 font-size: 16px; /* Kleinere Schriftgröße für Links */
             }
+
+            /* Bildausschnitt für mobile Geräte */
+            .image-container img {
+                object-position: center 10%; /* Bild 10% von oben */
+            }
         }
 
         @media (max-width: 480px) {
@@ -100,6 +106,10 @@
             .menu-overlay a {
                 font-size: 14px; /* Kleinere Schriftgröße für Links auf sehr kleinen Bildschirmen */
             }
+
+            .image-container img {
+                object-position: center 30%; /* Bild 30% von oben für sehr kleine Bildschirme */
+            }
         }
     </style>
 </head>
@@ -107,7 +117,7 @@
 
     <!-- Container mit Bild und Text -->
     <div class="image-container">
-        <img src="images/jacob-medrea_001.jpg" alt="Jacob Medrea"> <data-image-dimensions="2306x1537" data-image-focal-point="0.5,0.5" alt="IMG_9895.jpg"  data-use-advanced-positioning="true" data-load="false" />
+        <img src="images/jacob-medrea_001.jpg" alt="Jacob Medrea" />
         <div class="menu-overlay">
             <h1>Jacob Medrea</h1>
             <div class="links"> <!-- Neuer Container für die Links -->
