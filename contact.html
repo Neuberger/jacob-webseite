@@ -1,31 +1,149 @@
-<!DOCTYPE html>
-<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
+    <title>Responsive Bild</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
+        /* Stile für den Header-Bereich */
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+                position: relative;
+        }
+        
+        /* Stil für den Button und zentrierte Container */
+            .button-container {
+                display: flex; /* Flexbox aktivieren */
+                justify-content: center; /* Zentriert den Button horizontal */
+                margin: 20px 0; /* Abstand oben und unten */
+        }
+
+                /* Modal */
+        .modal {
+            display: none; /* Versteckt das Modal standardmäßig */
+            position: fixed; /* Fixiert das Modal */
+            z-index: 1000; /* Sicherstellen, dass es oben angezeigt wird */
+            left: 0;
+            top: 0;
+            width: 100%; /* Vollbildbreite */
+            height: 100%; /* Vollbildhöhe */
+            overflow: auto; /* Scrollen, wenn nötig */
+            background-color: rgba(0, 0, 0, 0.8); /* Hintergrundfarbe mit Transparenz */
+        }
+
+        /* Modal-Inhalt (Bild) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%; /* Bildbreite */
+            height: auto; /* Bildhöhe */
+        }
+
+        /* Schließen-Button */
+        .close {
+            position: absolute; /* Positioniert den Schließen-Button */
+            top: 20px;
+            right: 35px;
+            color: white; /* Schließen-Button-Farbe */
+            font-size: 40px; /* Größe des Schließen-Buttons */
+            font-weight: bold; /* Fett */
+            transition: 0.3s; /* Übergangseffekt */
+            cursor: pointer; /* Zeiger */
+        }
+
+        /* Schließen-Button-Hover */
+        .close:hover,
+        .close:focus {
+            color: #bbb; /* Farbe beim Hover */
+            text-decoration: none; /* Keine Unterstreichung */
+            cursor: pointer; /* Zeiger */
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-    <div class="contact"><h1>Kontakt</h1>
-    <form action="send_mail.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+    
+    <!-- Name Jacob Medrea -->
+    <div class="name">Jacob<br>Medrea</div>
+    
+    <div class="container">
+
+        <header>
+            <!-- Menübutton -->
+            <button class="menu-btn" id="menu-btn">&#9776;</button>
+                <nav class="navbar" id="navbar">
+                    <ul class="navlist">
+                        <li><a href="home.html" >home</a></li>
+                        <li><a href="https://www.youtube.com/@JacobMedrea" target="_blank">youtube</a></li>
+                        <li><a href="https://www.instagram.com/medreamusic/" target="_blank">instagram</a></li>
+                        <li><a href="https://www.twitch.tv/jacobmedreamusic?lang=de" target="_blank">twitch</a></li>
+                        <li><a href="https://www.tiktok.com/@medreamusic" target="_blank">tiktok</a></li>
+                        <li><a href="contact.html" >contact</a></li>
+                    </ul>
+                </nav>
+        </header>
         
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <main>
+            <a href="https://linktr.ee/jacobmedrea" target="_blank">
+                <img src="images/inflationspop-banner-001.png" alt="Beschreibung des Bildes">
+            </a>
+                
+            <!-- Button mit der Aufschrift "Listen" in einem zentrierten Container -->
+            <div class="button-container">
+                <a href="https://linktr.ee/jacobmedrea" target="_blank" class="button">Listen</a>
+            </div>
         
-        <label for="subject">Betreff:</label>
-        <input type="text" id="subject" name="subject" required><br><br>
+            <div class="video-responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fJPMNd-Il_o?si=P3jVOOSyfY8GDueo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         
-        <label for="message">Nachricht:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+            <h2>About Me</h2>
+            <p>At the tender age of one, I was already singing the melodies of children's songs to the members of my family.
+                The melodies of the nursery rhymes they had played to me on cassette and disc or vinyl record. To this day, I have easy access to new sound tools to inspire people.
+                <br><br>My academic background includes studying music education in Stuttgart
+                Weilimdorf (2006-2008) and jazz studies at the conservatory in Enschede (2008- 2011).
+                Since then I have been working as a freelance solo artist, playing shows (TedX, TIFF etc.) and smaller festivals ("Nimmplatz Open
+                independent festivals (‘Nimmplatz Open Air’, ‘NUR Live’ etc.), hold beatboxing and singing
+                workshops for disadvantaged &amp; autistic children and work as a private teacher.
+                <br><br>In my live performances, I work in a wide variety of forms, also as an
+                instrumentalist together with others, but also alone on stage as a loop artist.
+                I do not allow myself to be restricted by predefined genre boundaries, my sound art is characterised by constant transitions and fusions, a reference to funk, reggae, pop and hip hop, soul, electro and rock.
+                hop, soul, electro and rock in all their forms right through to classical music and thus a
+                mirror of my lifelong musical socialisation.
+            </p>
+         
+        <!-- Bild-Tag zum Öffnen in Fotoansicht -->
+            <a href="javascript:void(0);" onclick="openModal();">
+            <img src="images/jacob-medrea.png" alt="Beschreibung des Bildes">
+            </a>
+
+        <!-- Modal für die Fotoansicht -->
+        <div id="myModal" class="modal">
+            <span class="close" onclick="closeModal();">&times;</span>
+            <img class="modal-content" id="modalImage">
+            <div id="caption"></div>
+        </div>    
         
-        <button type="submit">Senden</button>
-    </div>
-    </form>
-    </header>
-</body>
+        </main>
+
+        <footer>
+        <hr>
+            <p class="text">
+                Contact<br>
+                Shows<br>
+                News<br>
+                Legal
+            </p>
+        </footer>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
