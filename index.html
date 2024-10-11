@@ -13,8 +13,8 @@
             justify-content: center; /* Zentriert den Inhalt */
             align-items: flex-end; /* Richtet den Inhalt am unteren Ende aus */
             width: 100%; /* Volle Breite des Containers */
-            overflow: hidden; /* Verhindert, dass Überlauf angezeigt wird */
             max-height: 100vh; /* Maximale Höhe auf der Ansichtshöhe begrenzen */
+            overflow: hidden; /* Verhindert, dass Überlauf angezeigt wird */
         }
 
         /* Das Bild */
@@ -23,7 +23,6 @@
             height: auto; /* Automatische Höhe, um das Seitenverhältnis zu bewahren */
             max-height: 100%; /* Maximalhöhe auf 100% setzen */
             object-fit: cover; /* Deckt den gesamten Container ab */
-            object-position: center top; /* Bildausschnitt von der Mitte oben */
         }
 
         /* Der Text über dem Bild */
@@ -84,17 +83,23 @@
         }
 
         @media (max-width: 768px) {
+            /* Hochformat für mobile Ansicht */
+            .image-container {
+                height: 100vh; /* Höhe auf volle Bildschirmhöhe setzen */
+            }
+
+            .image-container img {
+                height: 100%; /* Höhe auf 100% setzen, um den gesamten Container auszufüllen */
+                object-fit: cover; /* Deckt den gesamten Container ab */
+                object-position: center; /* Bild zentrieren */
+            }
+
             .menu-overlay h1 {
                 font-size: 32px; /* Kleinere Schriftgröße auf kleinen Bildschirmen */
             }
 
             .menu-overlay a {
                 font-size: 16px; /* Kleinere Schriftgröße für Links */
-            }
-
-            /* Bildausschnitt für mobile Geräte */
-            .image-container img {
-                object-position: center 10%; /* Bild 10% von oben */
             }
         }
 
@@ -105,10 +110,6 @@
 
             .menu-overlay a {
                 font-size: 14px; /* Kleinere Schriftgröße für Links auf sehr kleinen Bildschirmen */
-            }
-
-            .image-container img {
-                object-position: center 30%; /* Bild 30% von oben für sehr kleine Bildschirme */
             }
         }
     </style>
