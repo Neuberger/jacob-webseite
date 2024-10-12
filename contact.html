@@ -3,29 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
+    <title>Responsive Bild</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Stile für den Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px; /* Abstand im Header */
+            margin-bottom: 0; /* Sicherstellen, dass es keine Margen gibt */
+        }
 
+        /* Abstand um das about-Element zu entfernen */
+        .about {
+            margin-top: 10px; /* Optionaler Abstand, falls gewünscht */
+            padding: 0; /* Sicherstellen, dass kein Padding vorhanden ist */
+        }
+
+        /* Kontaktformular */
+        .contact-form {
+            display: flex;
+            flex-direction: column; /* Elemente untereinander anordnen */
+            max-width: max-content; /* Maximale Breite des Formulars */
+            margin: 0 auto; /* Nur horizontal zentriert */
+            padding: 20px; /* Innenabstand */
+            border: 1px solid #ccc; /* Rahmen um das Formular */
+            border-radius: 5px; /* Abgerundete Ecken */
+            background-color: #f9f9f9; /* Hintergrundfarbe */
+        }
+
+        .contact-form label {
+            margin-bottom: 5px; /* Abstand unter den Labels */
+            font-weight: bold; /* Fett für bessere Lesbarkeit */
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px; /* Abstand zwischen Eingabefeldern */
+            padding: 10px; /* Innenabstand */
+            border: 1px solid #ccc; /* Rahmen */
+            border-radius: 5px; /* Abgerundete Ecken */
+            width: 100%; /* Volle Breite */
+            box-sizing: border-box; /* Padding und Border in der Breite enthalten */
+        }
+
+        .contact-form button {
+            padding: 10px 15px; /* Innenabstand für den Button */
+            background-color: black; /* Hintergrundfarbe des Buttons */
+            color: white; /* Textfarbe des Buttons */
+            border: none; /* Keine Rahmen */
+            border-radius: 5px; /* Abgerundete Ecken */
+            cursor: pointer; /* Zeiger-Cursor */
+        }
+
+        .contact-form button:hover {
+            background-color: grey; /* Dunklere Farbe beim Hover */
+        }
+
+        /* Menübutton */
+        .menu-btn {
+            margin-left: auto; /* Abstand nach links */
+        }
+
+        /* Modal */
+        .modal {
+            display: none; /* Versteckt das Modal standardmäßig */
+            position: fixed; /* Fixiert das Modal */
+            z-index: 1000; /* Sicherstellen, dass es oben angezeigt wird */
+            left: 0;
+            top: 0;
+            width: 100%; /* Vollbildbreite */
+            height: 100%; /* Vollbildhöhe */
+            overflow: auto; /* Scrollen, wenn nötig */
+            background-color: rgba(0, 0, 0, 0.8); /* Hintergrundfarbe mit Transparenz */
+        }
+
+        /* Modal-Inhalt (Bild) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%; /* Bildbreite */
+            height: auto; /* Bildhöhe */
+        }
+
+        /* Schließen-Button */
+        .close {
+            position: absolute; /* Positioniert den Schließen-Button */
+            top: 20px;
+            right: 35px;
+            color: white; /* Schließen-Button-Farbe */
+            font-size: 40px; /* Größe des Schließen-Buttons */
+            font-weight: bold; /* Fett */
+            transition: 0.3s; /* Übergangseffekt */
+            cursor: pointer; /* Zeiger */
+        }
+
+        /* Schließen-Button-Hover */
+        .close:hover,
+        .close:focus {
+            color: #bbb; /* Farbe beim Hover */
+            text-decoration: none; /* Keine Unterstreichung */
+            cursor: pointer; /* Zeiger */
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-    <div class="contact"><h1>Kontakt</h1>
-    <form action="send_mail.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
+    
+    <!-- Name Jacob Medrea -->
+    <div class="name">Jacob<br>Medrea</div>
+    
+    <div class="container">
+
+        <header>
+            <!-- Menübutton -->
+            <button class="menu-btn" id="menu-btn">&#9776;</button>
+            <nav class="navbar" id="navbar">
+                <ul class="navlist">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="https://www.youtube.com/@JacobMedrea" target="_blank">youtube</a></li>
+                    <li><a href="https://www.instagram.com/medreamusic/" target="_blank">instagram</a></li>
+                    <li><a href="https://www.twitch.tv/jacobmedreamusic?lang=de" target="_blank">twitch</a></li>
+                    <li><a href="https://www.tiktok.com/@medreamusic" target="_blank">tiktok</a></li>
+                    <li><a href="about.html" >about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
+        </header>
         
-        <label for="email">E-Mail:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="subject">Betreff:</label>
-        <input type="text" id="subject" name="subject" required><br><br>
-        
-        <label for="message">Nachricht:</label><br>
-        <textarea id="message" name="message" rows="5" required></textarea><br><br>
-        
-        <button type="submit">Senden</button>
+        <main>
+            <!-- Kontaktformular -->
+            <div class="contact-form">
+                <h2>Kontaktformular</h2>
+                <form action="https://formspree.io/f/mnnqqnaw" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Nachricht:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Absenden</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <hr>
+            <p class="text">
+                Contact<br>
+                Shows<br>
+                News<br>
+                Legal
+            </p>
+        </footer>
     </div>
-    </form>
-    </header>
+
+    <script src="script.js"></script>
 </body>
 </html>
