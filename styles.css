@@ -27,6 +27,8 @@ h2 {font-weight:bolder;
 
 
 
+
+
 .container {
     max-width: 1200px; /* Maximale Breite von 1200 Pixel */
     width: 100%; /* Breite auf 100% des verfügbaren Raums setzen */
@@ -121,11 +123,22 @@ h1, p, ul {
     background-color: transparent;
     border: none;
     color: #333;
-    cursor: pointer;
     z-index: 1100;
     }
 
+footer {
+    position:relative;
+    top: 20px;
+    bottom: 20px;
+    left: 0px;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    z-index: 1100;
+    }
 
+.image-container .menu-overlay a{font-size:;}
 
 
 
@@ -199,3 +212,41 @@ h1, p, ul {
     cursor: pointer; /* Zeiger */
 }
 
+
+
+
+
+.spotify-container {
+    background-color: #f2f2f2; /* Graue Farbe anpassen */
+    padding: 10px; /* Optional: Etwas Abstand um das iframe */
+    border-radius: 12px; /* Gleiche Rundung wie das iframe */
+}
+
+
+
+
+.about h1 {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 36px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    z-index: 1100;
+    }
+
+
+.about a{
+    position: relative;
+    top: 0px;
+    left: 0x;
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    }
+
+
+.half-width {font-size: 10px;
+            font-weight: lighter;}
