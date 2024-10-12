@@ -6,6 +6,11 @@
     <title>Responsive Bild</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
         /* Stile für den Header */
         header {
             display: flex;
@@ -28,30 +33,45 @@
             max-width: max-content; /* Maximale Breite des Formulars */
             margin: 0 auto; /* Nur horizontal zentriert */
             padding: 20px; /* Innenabstand */
-            border: 1px solid #ccc; /* Rahmen um das Formular */
-            border-radius: 5px; /* Abgerundete Ecken */
-            background-color: #f9f9f9; /* Hintergrundfarbe */
+            background-color: white; /* Hintergrundfarbe */
+            width: 100%; /* Volle Breite */
+            box-sizing: border-box; /* Padding in der Breite enthalten */
         }
 
         .contact-form label {
-            margin-bottom: 5px; /* Abstand unter den Labels */
-            font-weight: bold; /* Fett für bessere Lesbarkeit */
+            margin-bottom: ´10px; /* Abstand unter den Labels */
+            font-weight:lighter; /* Fett für bessere Lesbarkeit */
         }
 
         .contact-form input,
         .contact-form textarea {
-            margin-bottom: 15px; /* Abstand zwischen Eingabefeldern */
-            padding: 10px; /* Innenabstand */
-            border: 1px solid #ccc; /* Rahmen */
-            border-radius: 5px; /* Abgerundete Ecken */
+            margin-top: 10px;
+            margin-bottom: 20px; /* Abstand zwischen Eingabefeldern */
+            padding: 15px; /* Innenabstand */
+            border: 0px solid black; /* Rahmenfarbe */
             width: 100%; /* Volle Breite */
             box-sizing: border-box; /* Padding und Border in der Breite enthalten */
+            outline: 0.5px solid black; /* Outline zur Hervorhebung */
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            outline: 2px solid black; /* Schwarze Outline beim Fokussieren */
+        }
+
+        .contact-form .name-container {
+            display: flex;
+            justify-content: space-between; /* Platz zwischen den Feldern */
+        }
+
+        .contact-form .name-container .half-width {
+            width: 48%; /* Beide Felder teilen sich die Breite */
         }
 
         .contact-form button {
             padding: 10px 15px; /* Innenabstand für den Button */
-            background-color: black; /* Hintergrundfarbe des Buttons */
-            color: white; /* Textfarbe des Buttons */
+            background-color: white; /* Hintergrundfarbe des Buttons */
+            color: black; /* Textfarbe des Buttons */
             border: none; /* Keine Rahmen */
             border-radius: 5px; /* Abgerundete Ecken */
             cursor: pointer; /* Zeiger-Cursor */
@@ -59,6 +79,12 @@
 
         .contact-form button:hover {
             background-color: grey; /* Dunklere Farbe beim Hover */
+        }
+
+        /* Kleinere Schriftgröße für "(required)" */
+        .required {
+            font-size: 0.8em;
+            color: gray;
         }
 
         /* Menübutton */
@@ -106,7 +132,33 @@
             text-decoration: none; /* Keine Unterstreichung */
             cursor: pointer; /* Zeiger */
         }
-    </style>
+
+        /* Stil für den zentrierten Button-Container */
+        .button-container {
+            display: flex; /* Flexbox aktivieren */
+            justify-content: center; /* Zentriert den Button horizontal */
+            margin: 20px 0; /* Abstand oben und unten */
+        }
+
+        /* Stil für den Button */
+        .contact-form button {
+            padding: 12px 25px; /* Innenabstand vergrößert für einen besseren Look */
+            background-color: white; /* Hintergrundfarbe */
+            color: black; /* Textfarbe */
+            border: 1px solid black; /* Kontur in Form eines 2px dicken Rahmens */
+            border-radius: 0px; /* Abgerundete Ecken */
+            font-size: 16px; /* Schriftgröße */
+            cursor: pointer; /* Zeiger-Cursor */
+            transition: background-color 0.3s ease, border-color 0.3s ease; /* Übergänge */
+        }
+
+        /* Hover-Effekt für den Button */
+        .contact-form button:hover {
+            background-color: black; /* Dunklere Farbe beim Hover */
+            border-color: black; /* Rahmenfarbe beim Hover */
+            color: white;
+        }
+            </style>
 </head>
 
 <body>
@@ -133,30 +185,54 @@
         </header>
         
         <main>
+            <a href="https://linktr.ee/jacobmedrea" target="_blank">
+                <img src="images/jacob-medrea-ted_001.jpg" alt="Beschreibung des Bildes">
+            </a><br><br>
+
+            <h1>BOOKING</h1>
             <!-- Kontaktformular -->
             <div class="contact-form">
-                <h2>Kontaktformular</h2>
                 <form action="https://formspree.io/f/mnnqqnaw" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    
-                    <label for="email">E-Mail:</label>
+                    <div class="large-text">
+                        <label>Name <span class="required">(required)</span></label>
+                    </div>
+                    <br>
+                    <div class="name-container">
+                        <div class="half-width">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" required>
+                        </div>
+                        <div class="half-width">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" required>
+                        </div>
+                    </div>
+
+                    <label for="email">Email Address <span class="required">(required)</span></label>
                     <input type="email" id="email" name="email" required>
+
+                    <label for="location">Location <span class="required">(required)</span></label>
+                    <input type="text" id="location" name="location" required>
+
+                    <label for="subject">Subject <span class="required">(required)</span></label>
+                    <input type="text" id="subject" name="subject" required>
                     
-                    <label for="message">Nachricht:</label>
+                    <label for="message">Message <span class="required">(required)</span></label>
                     <textarea id="message" name="message" rows="5" required></textarea>
                     
-                    <button type="submit">Absenden</button>
-                </form>
-            </div>
+                    <!-- Zentrierter Button -->
+                    <div class="button-container">
+                        <button type="submit" class="styled-button">Submit</button>
+                    </div>
+    </form>
+</div>
+
         </main>
 
         <footer>
             <hr>
             <p class="text">
                 Contact<br>
-                Shows<br>
-                News<br>
                 Legal
             </p>
         </footer>
